@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block page_title %}
+  My blog
+{% endblock %}
+
+{% block css_files %}
+  <link rel="stylesheet" href="{% static "blog/post.css" %}">
+  <link rel="stylesheet" href="{% static "blog/index.css" %}" />
+{% endblock %}
+
+{% block content %}
+  <section id="welcome">
+    <header>
+      <img src="{% static "blog/images/Untitled-2.png" %}" alt="Caio - o autor desse blog" />
+      <h2>BLOG DO CAIO BIANCHI</h2>
+    </header>
+    <p>Olá, eu sou o Caio e esse é o meu blog onde você pode encontrar todo tipo 
+       de divagação e textos inúteis.
+    </p>
+  </section>
+
+  <section id="latest-posts">
+    <h2>Meus textos mais recentes</h2>
+    
+    <ul>
+      {% for post in posts %}
+        {% include "blog/includes/post.html" %}
+      {% endfor %}
+    </ul>
+  </section>
+
+  <section id="about">
+    <h2>Quem sou eu</h2>
+    <p>Teste</p>
+  </section>
+{% endblock %}
+

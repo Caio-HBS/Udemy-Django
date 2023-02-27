@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap');
+
+body {
+  background-image: url('../static/images/obiwan.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+h2 {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: bold;
+  font-size: 3rem;
+  color: #ffffff;
+  text-align: left;
+}
+
+p {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #ffffff;
+  text-align: left;
+}
