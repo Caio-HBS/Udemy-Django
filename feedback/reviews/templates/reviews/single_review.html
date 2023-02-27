@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {% extends "reviews/base.html" %}
 
 {% block title %}Review detail{% endblock %}
@@ -14,4 +15,22 @@
             <button>Favourite</button>
         </form>
     {% endif %}
+=======
+{% extends "reviews/base.html" %}
+
+{% block title %}Review detail{% endblock %}
+
+{% block content %}
+    <h1>{{ review.user_name }} (Rating: {{ review.rating }})</h1>
+    <p>{{ review.review }}</p>
+    {% if is_favorite %}
+        <p>This is your favourite!</p>
+    {% else %}
+        <form action="/reviews/favorite" method="POST">
+            {% csrf_token %}
+            <input type="hidden" name="review_id" value="{{ review.id }}">
+            <button>Favourite</button>
+        </form>
+    {% endif %}
+>>>>>>> 7db6920b4a9d41e78a548ec5f18a2925d35d29e3
 {% endblock %}
